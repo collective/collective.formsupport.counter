@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from collective.volto.formsupport.interfaces import ICollectiveVoltoFormsupportLayer
 
 
-class ICollectiveFormsupportCounterLayer(IDefaultBrowserLayer):
+class ICollectiveFormsupportCounterLayer(ICollectiveVoltoFormsupportLayer):
     """Marker interface that defines a browser layer."""
