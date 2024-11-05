@@ -30,15 +30,21 @@ class FormDataAdapterWithCounter(FormDataAdapter):
     @block.setter
     def block(self, new_value):
         block = deepcopy(new_value)
-        # if block.get(COUNTER_ENABLED_FORM_FLAG_NAME):
-        block["subblocks"].append({"field_id": COUNTER_BLOCKS_FIELD_ID})
+
+        if block.get(COUNTER_ENABLED_FORM_FLAG_NAME):
+            block["subblocks"].append({"field_id": COUNTER_BLOCKS_FIELD_ID})
 
         self._block = block
 
     def extract_data_from_request(self):
         form_data = super().extract_data_from_request()
+        block_id = form_data.get("block_id", "")
+        block = None
 
-        if not self.block.get(COUNTER_ENABLED_FORM_FLAG_NAME):
+        if block_id:
+            block = self.get_block_data(block_id=block_id)
+
+        if not block.get(COUNTER_ENABLED_FORM_FLAG_NAME):
             return form_data
 
         annotations = IAnnotations(self.context)
@@ -47,7 +53,8 @@ class FormDataAdapterWithCounter(FormDataAdapter):
             {
                 "field_id": COUNTER_BLOCKS_FIELD_ID,
                 "label": _("Form counter"),
-                "value": annotations.get(COUNTER_ANNOTATIONS_NAME, 0) + 1,
+                "value": annotations.get(COUNTER_ANNOTATIONS_NAME, {}).get(block_id)
+                + 1,
             }
         )
 

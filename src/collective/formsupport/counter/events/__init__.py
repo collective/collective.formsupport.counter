@@ -12,10 +12,14 @@ def add_counter(context, event):
     if not event.form.get(COUNTER_ENABLED_FORM_FLAG_NAME):
         return
 
+    form_id = event.form_data.get("block_id")
+
     annotations = IAnnotations(context)
-    counter = annotations.get(COUNTER_ANNOTATIONS_NAME)
+    counter_object = annotations.setdefault(COUNTER_ANNOTATIONS_NAME, {})
+
+    counter = counter_object.get(form_id)
 
     if counter is None:
-        annotations[COUNTER_ANNOTATIONS_NAME] = 0
+        counter_object[form_id] = 0
 
-    annotations[COUNTER_ANNOTATIONS_NAME] += 1
+    counter_object[form_id] += 1
