@@ -53,7 +53,7 @@ class FormDataAdapterWithCounter(FormDataAdapter):
             {
                 "field_id": COUNTER_BLOCKS_FIELD_ID,
                 "label": _("Form counter"),
-                "value": annotations.get(COUNTER_ANNOTATIONS_NAME, {}).get(block_id)
+                "value": annotations.get(COUNTER_ANNOTATIONS_NAME, {}).get(block_id, 0)
                 + 1,
             }
         )

@@ -1,19 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:cache="http://namespaces.zope.org/cache"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     >
 
-  <include package=".form_data" />
-
   <plone:service
-      method="PATCH"
-      factory=".reset_counter.CounterReset"
-      for="plone.dexterity.interfaces.IDexterityContent"
+      method="GET"
+      factory=".csv.FormDataExportGetCounter"
+      for="plone.restapi.behaviors.IBlocks"
       permission="cmf.ModifyPortalContent"
       layer="collective.formsupport.counter.interfaces.ICollectiveFormsupportCounterLayer"
-      name="reset-counter"
+      name="@form-data-export"
       />
 
 </configure>
