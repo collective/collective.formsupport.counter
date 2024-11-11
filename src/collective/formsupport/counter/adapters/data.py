@@ -3,6 +3,7 @@ from collective.formsupport.counter.config import COUNTER_BLOCKS_FIELD_ID
 from collective.formsupport.counter.config import COUNTER_ENABLED_FORM_FLAG_NAME
 from collective.formsupport.counter.interfaces import ICollectiveFormsupportCounterLayer
 from collective.volto.formsupport.interfaces import IDataAdapter
+from fromcollective.formsupport.counter import logger
 from zope.annotation.interfaces import IAnnotations
 from zope.component import adapter
 from zope.interface import implementer
@@ -17,6 +18,11 @@ class DataAdapterWithCounter:
         self.request = request
 
     def get_block(self, block_id):
+        if not block_id:
+            logger.warning(
+                "missing block_id for %s get the first formsupport block",
+                self.context.absolute_url(),
+            )
         blocks = getattr(self.context, "blocks", {})
         if not blocks:
             return
