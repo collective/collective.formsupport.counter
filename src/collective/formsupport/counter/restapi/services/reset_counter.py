@@ -1,4 +1,4 @@
-from collective.formsupport import logger
+from collective.formsupport.counter import logger
 from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
 from plone.restapi.services import Service
 from zException import NotFound
