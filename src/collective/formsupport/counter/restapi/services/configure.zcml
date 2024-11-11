@@ -13,7 +13,7 @@
       for="plone.dexterity.interfaces.IDexterityContent"
       permission="cmf.ModifyPortalContent"
       layer="collective.formsupport.counter.interfaces.ICollectiveFormsupportCounterLayer"
-      name="reset-counter"
+      name="@reset-counter"
       />
 
 </configure>
