@@ -1,9 +1,6 @@
+from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
 from plone.restapi.services import Service
 from zope.annotation.interfaces import IAnnotations
-
-from collective.formsupport.counter.config import (
-    COUNTER_ANNOTATIONS_NAME,
-)
 
 
 class CounterReset(Service):

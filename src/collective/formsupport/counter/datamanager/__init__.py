@@ -1,19 +1,13 @@
-from copy import deepcopy
-
-from plone.dexterity.interfaces import IDexterityContent
-from zope.component import adapter
-from zope.interface import implementer
-from plone.dexterity.interfaces import IDexterityContent
-
+from collective.formsupport.counter.config import COUNTER_BLOCKS_FIELD_ID
+from collective.formsupport.counter.config import COUNTER_ENABLED_FORM_FLAG_NAME
+from collective.formsupport.counter.interfaces import ICollectiveFormsupportCounterLayer
 from collective.volto.formsupport.datamanager.catalog import FormDataStore
 from collective.volto.formsupport.interfaces import IFormDataStore
 from collective.volto.formsupport.utils import get_blocks
-
-from collective.formsupport.counter.interfaces import ICollectiveFormsupportCounterLayer
-from collective.formsupport.counter.config import (
-    COUNTER_ENABLED_FORM_FLAG_NAME,
-    COUNTER_BLOCKS_FIELD_ID,
-)
+from copy import deepcopy
+from plone.dexterity.interfaces import IDexterityContent
+from zope.component import adapter
+from zope.interface import implementer
 
 
 @implementer(IFormDataStore)

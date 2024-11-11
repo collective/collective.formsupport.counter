@@ -1,9 +1,6 @@
+from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
+from collective.formsupport.counter.config import COUNTER_ENABLED_FORM_FLAG_NAME
 from zope.annotation.interfaces import IAnnotations
-
-from collective.formsupport.counter.config import (
-    COUNTER_ANNOTATIONS_NAME,
-    COUNTER_ENABLED_FORM_FLAG_NAME,
-)
 
 
 def add_counter(context, event):

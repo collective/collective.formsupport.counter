@@ -19,13 +19,15 @@ class CollectiveFormsupportCounterLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.app.dexterity
+
         self.loadZCML(package=plone.app.dexterity)
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=collective.formsupport.counter)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.formsupport.counter:default')
+        applyProfile(portal, "collective.formsupport.counter:default")
 
 
 COLLECTIVE_FORMSUPPORT_COUNTER_FIXTURE = CollectiveFormsupportCounterLayer()
@@ -33,13 +35,13 @@ COLLECTIVE_FORMSUPPORT_COUNTER_FIXTURE = CollectiveFormsupportCounterLayer()
 
 COLLECTIVE_FORMSUPPORT_COUNTER_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_FORMSUPPORT_COUNTER_FIXTURE,),
-    name='CollectiveFormsupportCounterLayer:IntegrationTesting',
+    name="CollectiveFormsupportCounterLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_FORMSUPPORT_COUNTER_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_FORMSUPPORT_COUNTER_FIXTURE,),
-    name='CollectiveFormsupportCounterLayer:FunctionalTesting',
+    name="CollectiveFormsupportCounterLayer:FunctionalTesting",
 )
 
 
@@ -49,5 +51,5 @@ COLLECTIVE_FORMSUPPORT_COUNTER_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CollectiveFormsupportCounterLayer:AcceptanceTesting',
+    name="CollectiveFormsupportCounterLayer:AcceptanceTesting",
 )

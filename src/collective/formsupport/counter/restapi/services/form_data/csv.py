@@ -1,11 +1,9 @@
+from collective.formsupport.counter.config import COUNTER_BLOCKS_FIELD_ID
+from collective.formsupport.counter.config import COUNTER_ENABLED_FORM_FLAG_NAME
 from collective.volto.formsupport.restapi.services.form_data.csv import (
     FormDataExportGet,
-    SKIP_ATTRS,
 )
-from collective.formsupport.counter.config import (
-    COUNTER_ENABLED_FORM_FLAG_NAME,
-    COUNTER_BLOCKS_FIELD_ID,
-)
+from collective.volto.formsupport.restapi.services.form_data.csv import SKIP_ATTRS
 
 
 class FormDataExportGetCounter(FormDataExportGet):
