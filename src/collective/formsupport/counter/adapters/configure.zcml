@@ -5,6 +5,7 @@
     >
 
   <adapter factory=".post.PostAdapterWithCounter" />
+  <adapter factory=".data.DataAdapterWithCounter" />
 
 </configure>
 
