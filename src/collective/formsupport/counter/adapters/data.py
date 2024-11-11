@@ -35,7 +35,7 @@ class DataAdapterWithCounter:
         block = self.get_block(block_id)
         if block and block.get(COUNTER_ENABLED_FORM_FLAG_NAME):
             annotations = IAnnotations(self.context)
-            result[COUNTER_BLOCKS_FIELD_ID] = annotations.get(
+            result["form_data"][COUNTER_BLOCKS_FIELD_ID] = annotations.get(
                 COUNTER_ANNOTATIONS_NAME, {}
             ).get(block_id, 0)
         return result
