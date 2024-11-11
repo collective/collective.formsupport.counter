@@ -12,6 +12,10 @@ from zope.interface import Interface
 @implementer(IDataAdapter)
 @adapter(Interface, ICollectiveFormsupportCounterLayer)
 class DataAdapterWithCounter:
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
     def get_block(self, block_id):
         blocks = getattr(self.context, "blocks", {})
         if not blocks:
