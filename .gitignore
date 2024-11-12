@@ -45,10 +45,10 @@ local.cfg
 /sources/
 /venv/
 .installed.txt
-.python-version
 
 forest.dot
 forest.json
+.python-version
 
 ##
 # Add extra configuration options in .meta.toml:

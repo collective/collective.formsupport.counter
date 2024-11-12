@@ -20,6 +20,14 @@ forest.json
 .python-version
 """
 
+[github]
+jobs = [
+    "qa",
+    "test",
+    "coverage",
+    "release_ready",
+    ]
+
 [meta]
 template = "default"
 commit-id = "721299ce"
