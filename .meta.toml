@@ -17,6 +17,7 @@ python =
 extra_lines = """
 forest.dot
 forest.json
+.python-version
 """
 
 [meta]
