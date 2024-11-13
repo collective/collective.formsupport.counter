@@ -24,7 +24,6 @@ forest.json
 jobs = [
     "qa",
     "test",
-    "coverage",
     "release_ready",
     ]
 
