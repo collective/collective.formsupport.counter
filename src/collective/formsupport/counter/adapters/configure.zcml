@@ -8,4 +8,3 @@
   <adapter factory=".data.DataAdapterWithCounter" />
 
 </configure>
-

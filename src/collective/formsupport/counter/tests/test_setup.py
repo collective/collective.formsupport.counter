@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 """Setup tests for this package."""
+
 from collective.formsupport.counter.testing import (  # noqa: E501
     COLLECTIVE_FORMSUPPORT_COUNTER_INTEGRATION_TESTING,
 )

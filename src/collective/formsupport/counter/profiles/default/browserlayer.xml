@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <layers>
-  <layer
-      name="collective.formsupport.counter"
-      interface="collective.formsupport.counter.interfaces.ICollectiveFormsupportCounterLayer"
-      />
+  <layer interface="collective.formsupport.counter.interfaces.ICollectiveFormsupportCounterLayer"
+         name="collective.formsupport.counter"
+  />
 </layers>
