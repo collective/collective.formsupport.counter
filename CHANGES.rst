@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0rc2 (unreleased)
+1.0.0rc2 (2024-11-15)
 ---------------------
 
 - Fix manifest
