@@ -1,4 +1,4 @@
-graft src/collective.formsupport
+graft src/collective/formsupport
 graft docs
 include *.rst
 exclude tox.ini
