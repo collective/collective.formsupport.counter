@@ -5,7 +5,8 @@ Changelog
 1.0.0rc2 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Fix manifest
+  [mamico]
 
 
 1.0.0rc1 (2024-11-13)
