@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0rc3 (unreleased)
+1.0.0rc3 (2024-11-19)
 ---------------------
 
 - Fix counter
