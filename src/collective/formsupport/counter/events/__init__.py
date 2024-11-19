@@ -15,4 +15,4 @@ def add_counter(context, event):
     if block_id not in annotations[COUNTER_ANNOTATIONS_NAME]:
         annotations[COUNTER_ANNOTATIONS_NAME][block_id] = 1
     else:
-        annotations[COUNTER_ANNOTATIONS_NAME][block_id] = +1
+        annotations[COUNTER_ANNOTATIONS_NAME][block_id] += 1

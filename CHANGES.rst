@@ -5,7 +5,8 @@ Changelog
 1.0.0rc3 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Fix counter
+  [mamico]
 
 
 1.0.0rc2 (2024-11-15)
