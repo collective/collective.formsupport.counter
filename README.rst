@@ -23,12 +23,12 @@
 collective.formsupport.counter
 ==============================
 
-Counter integration for collective.formsupport.counter
+Counter integration for `collective.volto.formsupport <https://github.com/collective/collective.volto.formsupport>`_
 
 Features
 --------
 
-- Form counter for collective.formsupport.counter
+- Form counter for `collective.volto.formsupport <https://github.com/collective/collective.volto.formsupport>`_ >= 3.2
 
 
 Installation
