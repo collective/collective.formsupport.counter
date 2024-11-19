@@ -1,13 +1,34 @@
+.. image:: https://img.shields.io/pypi/v/collective.formsupport.counter.svg
+    :target: https://pypi.python.org/pypi/collective.formsupport.counter/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/status/collective.formsupport.counter.svg
+    :target: https://pypi.python.org/pypi/collective.formsupport.counter
+    :alt: Egg Status
+
+.. image:: https://img.shields.io/pypi/pyversions/collective.formsupport.counter.svg?style=plastic
+    :target: https://pypi.python.org/pypi/collective.formsupport.counter/
+    :alt: Supported - Python Versions
+
+.. image:: https://img.shields.io/pypi/l/collective.formsupport.counter.svg
+    :target: https://pypi.python.org/pypi/collective.formsupport.counter/
+    :alt: License
+
+.. image:: https://coveralls.io/repos/github/collective/collective.formsupport.counter/badge.svg
+    :target: https://coveralls.io/github/collective/collective.formsupport.counter
+    :alt: Coverage
+
+
 ==============================
 collective.formsupport.counter
 ==============================
 
-Counter integration for collective.volto.formsupport
+Counter integration for collective.formsupport.counter
 
 Features
 --------
 
-- Form counter for collective.volto.formsupport
+- Form counter for collective.formsupport.counter
 
 
 Installation
