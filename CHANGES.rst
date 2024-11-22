@@ -5,7 +5,8 @@ Changelog
 1.0.0rc4 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Label translated
+  [mamico]
 
 
 1.0.0rc3 (2024-11-19)

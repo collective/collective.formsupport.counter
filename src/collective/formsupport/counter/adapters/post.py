@@ -10,6 +10,8 @@ from zope.annotation.interfaces import IAnnotations
 from zope.component import adapter
 from zope.interface import implementer
 from zope.interface import Interface
+from zope.i18n import translate
+from plone import api
 
 
 @implementer(IPostAdapter)
@@ -44,12 +46,12 @@ class PostAdapterWithCounter(PostAdapter):
 
         annotations = IAnnotations(self.context)
 
+        value = annotations.get(COUNTER_ANNOTATIONS_NAME, {}).get(block_id, 0) + 1
         form_data["data"].append(
             {
                 "field_id": COUNTER_BLOCKS_FIELD_ID,
-                "label": _("Form counter"),
-                "value": annotations.get(COUNTER_ANNOTATIONS_NAME, {}).get(block_id, 0)
-                + 1,
+                "label": translate(_("Form counter"), target_language=api.portal.get_current_language()),
+                "value": value,
             }
         )
 

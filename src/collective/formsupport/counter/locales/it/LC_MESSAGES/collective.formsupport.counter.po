@@ -17,7 +17,7 @@ msgstr ""
 #: ../adapters/post.py:50
 #: ../restapi/services/form_data/csv.py:12
 msgid "Form counter"
-msgstr "Progressivo"
+msgstr "Numero progressivo"
 
 #: ../configure.zcml:32
 msgid "Installs the collective.formsupport.counter add-on."
