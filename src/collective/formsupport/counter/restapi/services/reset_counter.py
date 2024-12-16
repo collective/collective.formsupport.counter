@@ -1,7 +1,7 @@
 from collective.formsupport.counter import logger
 from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
 from plone.restapi.services import Service
-from zExceptions import NotFound
+from zExceptions import NotFound, BadRequest
 from zope.annotation.interfaces import IAnnotations
 
 
@@ -12,9 +12,12 @@ class CounterReset(Service):
                 "missing block_id for %s get the first formsupport block",
                 self.context.absolute_url(),
             )
+
         blocks = getattr(self.context, "blocks", {})
+
         if not blocks:
             return
+
         for id, block in blocks.items():
             if block.get("@type", "") == "form":
                 if not block_id or block_id == id:
@@ -22,9 +25,19 @@ class CounterReset(Service):
 
     def reply(self):
         block_id = self.get_block_id(self.request.get("block_id"))
+
         if not block_id:
             raise NotFound(self.context, "", self.request)
+
+        try:
+            counter_value = int(self.request.get("counter_value", 0))
+        except ValueError:
+            raise BadRequest(
+                "Badly composed `counter_value` parameter, integer required."
+            )
+
         annotations = IAnnotations(self.context)
         counter_object = annotations.setdefault(COUNTER_ANNOTATIONS_NAME, {})
-        counter_object[block_id] = 0
+        counter_object[block_id] = counter_value
+
         self.request.response.setStatus(204)
