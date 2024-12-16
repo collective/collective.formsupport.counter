@@ -14,11 +14,15 @@ def add_counter(context, event):
 
     if not event.form.get(COUNTER_ENABLED_FORM_FLAG_NAME):
         return
+
     block_id = event.form_data.get("block_id")
     annotations = IAnnotations(context)
+
     if COUNTER_ANNOTATIONS_NAME not in annotations:
         annotations[COUNTER_ANNOTATIONS_NAME] = PersistentMapping()
+
     if block_id not in annotations[COUNTER_ANNOTATIONS_NAME]:
         annotations[COUNTER_ANNOTATIONS_NAME][block_id] = 1
+
     else:
         annotations[COUNTER_ANNOTATIONS_NAME][block_id] += 1
