@@ -55,7 +55,7 @@ Here is the list of available REST API endpoints and how to use them.
 
    - **Endpoint**: `/<document>/@reset-counter`.
    - **Method**: `PATCH`.
-   - **Parameters**: `block_id` form block identifier.
+   - **Parameters**: `block_id` form block identifier, `counter_value` value to be set (optiional).
    - **Description**: Reset form counter.
    - **Request**: No parameters required.
    - **Response**:
