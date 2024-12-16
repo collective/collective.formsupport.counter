@@ -1,7 +1,8 @@
 from collective.formsupport.counter import logger
 from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
 from plone.restapi.services import Service
-from zExceptions import NotFound, BadRequest
+from zExceptions import BadRequest
+from zExceptions import NotFound
 from zope.annotation.interfaces import IAnnotations
 
 

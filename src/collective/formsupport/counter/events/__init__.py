@@ -1,7 +1,6 @@
 from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
 from collective.formsupport.counter.config import COUNTER_ENABLED_FORM_FLAG_NAME
 from collective.formsupport.counter.interfaces import ICollectiveFormsupportCounterLayer
-
 from Persistence import PersistentMapping
 from zope.annotation.interfaces import IAnnotations
 from zope.globalrequest import getRequest

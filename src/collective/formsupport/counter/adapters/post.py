@@ -6,12 +6,12 @@ from collective.formsupport.counter.interfaces import ICollectiveFormsupportCoun
 from collective.volto.formsupport.adapters.post import PostAdapter
 from collective.volto.formsupport.interfaces import IPostAdapter
 from copy import deepcopy
+from plone import api
 from zope.annotation.interfaces import IAnnotations
 from zope.component import adapter
+from zope.i18n import translate
 from zope.interface import implementer
 from zope.interface import Interface
-from zope.i18n import translate
-from plone import api
 
 
 @implementer(IPostAdapter)
@@ -50,7 +50,9 @@ class PostAdapterWithCounter(PostAdapter):
         form_data["data"].append(
             {
                 "field_id": COUNTER_BLOCKS_FIELD_ID,
-                "label": translate(_("Form counter"), target_language=api.portal.get_current_language()),
+                "label": translate(
+                    _("Form counter"), target_language=api.portal.get_current_language()
+                ),
                 "value": value,
             }
         )
