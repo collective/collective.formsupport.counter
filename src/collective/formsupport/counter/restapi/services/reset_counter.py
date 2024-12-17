@@ -4,6 +4,7 @@ from plone.restapi.services import Service
 from zExceptions import BadRequest
 from zExceptions import NotFound
 from zope.annotation.interfaces import IAnnotations
+from plone.restapi.deserializer import json_body
 
 
 class CounterReset(Service):
@@ -25,13 +26,15 @@ class CounterReset(Service):
                     return id
 
     def reply(self):
-        block_id = self.get_block_id(self.request.get("block_id"))
+        data = json_body(self.request)
+        block_id = self.get_block_id(data.get("block_id"))
 
         if not block_id:
             raise NotFound(self.context, "", self.request)
 
         try:
-            counter_value = int(self.request.get("counter_value", 0))
+            counter_value = int(data.get("counter_value", 0))
+
         except ValueError:
             raise BadRequest(
                 "Badly composed `counter_value` parameter, integer required."
