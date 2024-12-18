@@ -48,19 +48,92 @@ and then running ``bin/buildout``
 
 REST API
 ========
+-------------------------------------------
+🔄 Reset Form Counter
+-------------------------------------------
 
-Here is the list of available REST API endpoints and how to use them.
+Reset the counter for a specific form block.
 
-1. **Reset form counter**
+**Endpoint:**
 
-   - **Endpoint**: `/<document>/@reset-counter`.
-   - **Method**: `PATCH`.
-   - **Parameters**: `block_id` form block identifier, `counter_value` value to be set (optional, 0 by default).
-   - **Description**: Reset form counter.
-   - **Request**: No parameters required.
-   - **Response**:
+.. code-block:: text
 
-     - **Status Code**: `204 No Content`
+    /<document>/@counter
+
+**Method:**
+
+``PATCH``
+
+**Parameters:**
+
+- ``block_id`` *(required)* — The identifier of the form block.
+- ``counter_value`` *(optional)* — The value to set the counter to (default: 0).
+
+**Description:**
+
+This endpoint resets the form counter to a specified value.
+
+**Request Example:**
+
+.. code-block:: http
+
+    PATCH /my-document/@reset-counter
+    Content-Type: application/json
+
+    {
+        "block_id": "form_block_123",
+        "counter_value": 5
+    }
+
+**Response:**
+
+- **Status Code:** ``204 No Content``
+
+  The response indicates that the counter has been successfully reset. No response body is returned.
+
+-------------------------------------------
+📊 Get Counter Value
+-------------------------------------------
+
+Retrieve the current counter value for a specific form block.
+
+**Endpoint:**
+
+.. code-block:: text
+
+    /<document>/@counter
+
+**Method:**
+
+``GET``
+
+**Parameters:**
+
+- ``block_id`` *(required)* — The identifier of the form block.
+
+**Description:**
+
+This endpoint retrieves the current value of the form counter.
+
+**Request Example:**
+
+.. code-block:: http
+
+    GET /my-document/@counter?block_id=form_block_123
+    Accept: application/json
+
+**Response:**
+
+- **Status Code:** ``200 OK``
+
+- **Response Body:**
+
+.. code-block:: json
+
+    {
+        "counter_value": 5
+    }
+
 
 Authors
 -------
