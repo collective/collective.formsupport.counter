@@ -109,7 +109,7 @@ Retrieve the current counter value for a specific form block.
 
 **Parameters:**
 
-- ``block_id`` *(required)* — The identifier of the form block.
+- ``block_id`` *(optional)* — The identifier of the form block. The first available is being selected if not passed.
 
 **Description:**
 
