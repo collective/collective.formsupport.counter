@@ -66,7 +66,7 @@ Reset the counter for a specific form block.
 
 **Parameters:**
 
-- ``block_id`` *(required)* — The identifier of the form block.
+- ``block_id`` *(optional)* — The identifier of the form block, if not passed, the first available formblock selected.
 - ``counter_value`` *(optional)* — The value to set the counter to (default: 0).
 
 **Description:**
@@ -77,7 +77,7 @@ This endpoint resets the form counter to a specified value.
 
 .. code-block:: http
 
-    PATCH /my-document/@reset-counter
+    PATCH /my-document/@counter
     Content-Type: application/json
 
     {
