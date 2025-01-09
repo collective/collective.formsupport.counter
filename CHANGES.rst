@@ -5,7 +5,8 @@ Changelog
 1.0.0rc5 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Allignments with collective.volto.formsupport.
+  [folix-01]
 
 
 1.0.0rc4 (2024-11-22)
