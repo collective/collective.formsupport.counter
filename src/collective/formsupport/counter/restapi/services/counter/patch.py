@@ -1,10 +1,11 @@
 from collective.formsupport.counter import logger
 from collective.formsupport.counter.config import COUNTER_ANNOTATIONS_NAME
+from persistent.dict import PersistentDict
+from plone.restapi.deserializer import json_body
 from plone.restapi.services import Service
 from zExceptions import BadRequest
 from zExceptions import NotFound
 from zope.annotation.interfaces import IAnnotations
-from plone.restapi.deserializer import json_body
 
 
 class CounterReset(Service):
@@ -41,7 +42,9 @@ class CounterReset(Service):
             )
 
         annotations = IAnnotations(self.context)
-        counter_object = annotations.setdefault(COUNTER_ANNOTATIONS_NAME, {})
+        counter_object = annotations.setdefault(
+            COUNTER_ANNOTATIONS_NAME, PersistentDict({})
+        )
         counter_object[block_id] = counter_value
 
         self.request.response.setStatus(204)

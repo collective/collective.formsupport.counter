@@ -5,7 +5,8 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix counter value persistence problem.
+  [folix-01]
 
 
 1.0.0 (2025-01-09)
