@@ -24,7 +24,7 @@ Changelog
 1.0.0 (2025-01-09)
 ------------------
 
-- Allignments with collective.volto.formsupport.
+- Alignments with collective.volto.formsupport.
   [folix-01]
 
 
