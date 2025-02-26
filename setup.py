@@ -56,7 +56,7 @@ setup(
         "z3c.jbot",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
-        "collective.volto.formsupport>=3.2.0.dev0",
+        "collective.volto.formsupport>=3.3.0",
     ],
     extras_require={
         "test": [

@@ -5,7 +5,8 @@ Changelog
 1.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- collective.volto.formsupport new versions compatibility.
+  [folix-01]
 
 
 1.0.1 (2025-01-10)
