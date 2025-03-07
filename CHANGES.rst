@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.3 (unreleased)
+1.0.3 (2025-03-07)
 ------------------
 
 - collective.volto.formsupport new versions compatibility (>= 3.2.3).
