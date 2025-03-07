@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="collective.formsupport.counter",
-    version="1.0.3",
+    version="1.0.4.dev0",
     description="Counter integration for collective.volto.formsupport",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
