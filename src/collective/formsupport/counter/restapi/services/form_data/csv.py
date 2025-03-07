@@ -9,8 +9,8 @@ from zope.i18n import translate
 
 
 class FormDataExportGetCounter(FormDataExportGet):
-    def get_fields_labels(self, item):
-        fields_labels = super().get_fields_labels(item)
+    def get_fields_labels(self):
+        fields_labels = super().get_fields_labels()
         fields_labels[COUNTER_BLOCKS_FIELD_ID] = translate(
             _("Form counter"), context=self.request
         )
