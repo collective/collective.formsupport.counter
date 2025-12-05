@@ -5,7 +5,6 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     >
 
-  <include package=".form_data" />
   <include package=".counter" />
 
 </configure>
