@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.4 (unreleased)
+1.0.4 (2025-12-11)
 ------------------
 
 - Remove not needed form_data customization and set right label for form fields.
