@@ -8,7 +8,6 @@ import collective.formsupport.counter
 
 
 class CollectiveFormsupportCounterLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):

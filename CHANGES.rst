@@ -5,7 +5,8 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove not needed form_data customization and set right label for form fields.
+  [cekk]
 
 
 1.0.3 (2025-03-07)
