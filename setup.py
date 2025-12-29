@@ -52,8 +52,6 @@ setup(
     python_requires=">=3.8",
     install_requires=[
         "setuptools",
-        # -*- Extra requirements: -*-
-        "z3c.jbot",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
         "collective.volto.formsupport>=3.2.3",
@@ -61,11 +59,10 @@ setup(
     extras_require={
         "test": [
             "plone.app.testing",
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
             "plone.testing>=5.0.0",
-            "plone.app.contenttypes",
+            "plone.app.contenttypes[test]",
+            "plone.restapi[test]",
+            "collective.volto.formsupport[honeypot]>=3.2.3",
         ],
     },
     entry_points="""
