@@ -5,9 +5,11 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
-
+- [BREAKING] Now @counter endpoint return also block_id info.
+  [cekk]
+- PATCH endpoint take care of block_id parameter.
+  [cekk]
+  
 1.0.4 (2025-12-11)
 ------------------
 
